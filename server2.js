@@ -58,5 +58,5 @@ http.createServer((req, res) => {
 
     //Método de escuta do servidor, ou seja, é nesse método que o servidor observa o que é requsitado para o sistema
 }).listen(port, hostname, () => {
-    console.log(`Server está funcionando em https://${hostname}:${port}/`);
+    console.log(`Server está funcionando em http://${hostname}:${port}/`);
 });
