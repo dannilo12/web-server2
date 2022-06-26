@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Respostas dos exercícios de HTML</title>
+    </head>
+    <body>
+        <section>
+            <h1>Atividade 1</h1>
+            <p>Elabore a seguinte estrutura de lista, utilizando apenas HTML</p>
+            <ol>
+                <li>HTML
+                    <ol start="3">
+                        <li><mark><strong>Elementos</strong></mark>
+                            <ul>
+                            <li>Sintaxe</li>
+                            <li>Semântica</li>
+                            </ul>
+                        </li>
+                        <li><mark><em>Atributos</em></mark></li>
+                    </ol>
+                </li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ol>
+        </section>
+		<hr>
+		<section>
+			<h1>Atividade 2</h1>
+            <p>Trabalhando com textos em HTML.</p>
+			<p><abbr title="HyperText Markup Language">HTML</abbr> é uma linguagem de marcação utilizada para produzir páginas na Web. Documentos<br> HTML podem ser interpretados por navegadores. As primeiras versões do HTML foram<br> definidas com regras sintáticas flexíveis, o que ajudou aqueles sem familiaridade com a publicação<br> na Web.<br> Através do tempo, a utilização de ferramentas para autoria de HTML aumentou, assim como a<br> tendência em tornar a sintaxe cada vez mais rígida. Apesar disso (por questões históricas), os<br> navegadores ainda hoje conseguem interpretar páginas web que estão longe de ser um código<br> HTML válido.</p>
+			<blockquote>Tim Berners-Lee (físico britânico) criou o HTML original (e outros protocolos<br> associados como o HTTP).<br><small>Fonte: <a href="http://www.wikipedia.com.br">Wikipédia</a></small></blockquote>
+			<p>O HTML é uma linguagem de marcação bastante simples, porém a linguagem possui muitas tags. </p>
+			<p>Para concluir uma fórmula qualquer e sem sentido: <code>log5<sub>10</sub> * n<sup>2</sup> = H<sub>2</sub>O</code></p>
+		</section>
+        <hr>
+		<section>
+			<h1>Atividade 3</h1>
+            <p>Ao clicar nas imagens, encaminhe para os respectivos sites:</p>
+			<a href="http://www.google.com.br"><img src="http://www.google.com.br/images/srpr/logo11w.png" alt="Logo do Google"></a>
+			<a href="http://www.utfpr.edu.br">
+				<figure>
+					<img src="http://www.utfpr.edu.br/logo.png">
+					<figcaption>Universidade Tecnológica Federal do Paraná</figcaption>
+				</figure>
+			</a>
+		</section>
+		<hr>
+		<section>
+			<h1>Atividade 4</h1>
+            <p>Elabore os seguintes formulários:</p>
+			<div>
+				<h2>a) Formulário de Login</h2>
+				<form action="page.html" method="post">
+					<fieldset>
+						<legend>Login</legend>
+						<div>
+							<label for="username">Usuário</label>
+							<input type="text" name="username" id="username" size="15" placeholder="Nome do usuário">
+						</div>
+						<div>
+							<label for="password">Senha</label>
+							<input type="password" name="password" id="password" size="15" value="">
+							<input type="submit" id="loginbtn" value="Entrar">
+						</div>
+						<div>
+							<input type="checkbox" name="rememberusername" id="rememberusername" value="1" checked="checked"> <label for="rememberusername">Lembrar usuário</label>
+						</div>
+					</fieldset>
+					<div>
+						<a href="esqueci.html">Esqueci minha senha</a> | <a href="cadastro.html">Cadastrar</a>
+					</div>
+				</form>
+            </div>
+			<div>
+				<h2>b) Formulário Geral</h2>
+				<form action="salvar.html" method="post">
+					<div>
+						<label for="numsorte">Número da Sorte: </label>
+						<input type="range" id="numsorte" name="numsorte" min="1" max="100" value="33">
+						<span>(Entre 1 e 100, Valor default: 33)</span>
+					</div>
+					<div>
+						<fieldset><legend>Linguagem de programação:</legend>
+						<div><label><input type="checkbox" name="lang" value="c" checked> C</label></div>
+						<div><label><input type="checkbox" name="lang" value="cobol"> Cobol</label></div>
+						<div><label><input type="checkbox" name="lang" value="java" checked> Java</label></div>
+						<div><label><input type="checkbox" name="lang" value="php"> PHP</label></div>
+						<div><label><input type="checkbox" name="lang" value="python"> Python</label></div></fieldset>
+					</div>
+					<div>
+						<fieldset><legend>Área de interesse:</legend>
+						<label><input type="radio" name="area" value="P" checked> Programação</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label><input type="radio" name="area" value="B"> Banco de dados</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label><input type="radio" name="area" value="R"> Redes de computadores</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</fieldset>
+					</div>
+					<div>
+						<label for="semestre">Semestre: </label>
+						<select name="semestre" id="semestre">
+							<option value="1">1 Semestre</option>
+							<option value="2">2 Semestre</option>
+							<option value="3" selected>3 Semestre</option>
+							<option value="4">4 Semestre</option>
+							<option value="5">5 Semestre</option>
+							<option value="6">6 Semestre</option>
+							<option value="7">7 Semestre</option>
+							<option value="8">8 Semestre</option>
+						</select>
+						<span>(Semestre que você está cursando)</span>
+					</div>
+					<div>
+						<label for="texto">Código fonte</label>
+						<textarea id="texto" name="texto" cols="70" rows="7" placeholder="Digite o código fonte da linguagem selecionada"></textarea>
+					</div>
+					<div>
+						<button type="submit">&raquo;&raquo; Salvar &raquo;&raquo;</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<hr>
+        <section>
+            <h1>Atividade 5</h1>
+            <p>Elabore a seguinte tabela utilizando apenas HTML</p>
+            <table border="1">
+				<caption>Tabela de preços</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">ID</th>
+                        <th rowspan="2">Nome</th>
+                        <th rowspan="2">Descrição</th>
+                        <th colspan="2">Preço</th>
+                    </tr>
+                    <tr>
+                        <th>Custo</th>
+                        <th>Venda</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total</strong></td>
+                        <td>225,00</td>
+                        <td>299,00</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mouse</td>
+                        <td>Mouse ultra moderno com <i>scroll</i></td>
+                        <td>75,00</td>
+                        <td><del>100,00</del><br>99,00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Capa para notebook</td>
+                        <td>Capa resistente a água e a quedas</td>
+                        <td>150,00</td>
+                        <td>200,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+		<hr>
+        <section>
+            <h1>Atividade 6</h1>
+            <p>Represente a seguinte estrutura, utilizando apenas HTML:</p>
+<pre>
+   www/
+    |-- css/
+    |    |-- estilo.css
+    |-- js
+    |    |-- painel.js
+    |    |-- page.js
+    |-- img
+         |-- banner.jpg
+         |-- logo.png
+         |-- fundo.jpg
+</pre>
+        </section>
+		<hr>
+        <section>
+            <h1>Atividade 7</h1>
+            <p>Represente a seguinte estrutura, utilizando apenas HTML:</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Esqueleto da página&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá Mundo!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </section>
+    </body>
+</html>
