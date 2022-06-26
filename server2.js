@@ -47,7 +47,7 @@ http.createServer((req,res) => {
        fluxo_arquivo.pipe(res);
 
     } else if (recurso_carregado.isDirectory()){
-        res.writeHead(302, {'Location':'index.php'});
+        res.writeHead(302, {'Location':'index.html'});
         res.end();
 
     } else {
