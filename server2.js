@@ -15,6 +15,7 @@ const mimeType = {
     htlm:"text/html",
     css:"text/css",
     js:"text/javascript",
+    //php:"text/php",
     png:"image/png",
     jpeg:"image/jpeg",
     jpg:"image/jpg",
@@ -29,10 +30,9 @@ http.createServer((req,res) => {
     console.log(caminho_de_acesso);
 
     let recurso_carregado;
-   // try {
+    //try {
         recurso_carregado =  fs.lstatSync(caminho_de_acesso);
-
-   /* } catch (erro) {
+    /*} catch (erro) {
         res.writeHead(404, {'Content-Typ':'text/plain'});
         res.write('Error 404! Arquivo não encontrado!');
         res.end();
@@ -40,19 +40,19 @@ http.createServer((req,res) => {
     }*/
 
     if (recurso_carregado.isFile()) {
-       let mimeType = mimeType[path.extname(caminho_de_acesso).substring(1)];
+       let mimeType = mimeTypes[path.extname(caminho_de_acesso).substring(1)];
 
-       res.writeHead(200, {'Content-Type':mimeType});
+       res.writeHead(200, {'Content-Type': mimeType});
        let fluxo_arquivo = fs.createReadStream(caminho_de_acesso);
        fluxo_arquivo.pipe(res);
 
     } else if (recurso_carregado.isDirectory()){
-        res.writeHead(302, {'Location':'index.html'});
+        res.writeHead(302, {'Location':'index.php'});
         res.end();
 
     } else {
         res.writeHead(500, {'Content-Type':'text/plain'});
-        res.write("ERROR 5000: Erro Interno do Servidor!");
+        res.write("ERROR 500: Erro Interno do Servidor!");
         res.end();
     }
    
