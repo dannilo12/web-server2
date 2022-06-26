@@ -18,4 +18,6 @@ const mimetype = {
     woff:"font/woof"
 };
 
-
+http.createServer((req,res) => {
+    
+});
