@@ -7,11 +7,11 @@ const path = require('path'); //
 
 //Chamado do servidor
 
-const hostname = '127.0.0.1"'; // Local onde a aplicação vai rodar
-const port = '3000'; //  A porta da aplicação
+const hostname = '127.0.0.1'; // Local onde a aplicação vai rodar
+const port = 3000; //  A porta da aplicação
 
 //mimeTypes é um objeto que guarda quais os tipos de arquivos meu servidor vai estar carregando
-const mimeType = {
+const mimeTypes = {
     htlm:"text/html",
     css:"text/css",
     js:"text/javascript",
