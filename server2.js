@@ -29,21 +29,35 @@ http.createServer((req,res) => {
     console.log(caminho_de_acesso);
 
     let recurso_carregado;
-    try {
+   // try {
         recurso_carregado =  fs.lstatSync(caminho_de_acesso);
 
-    } catch (erro) {
+   /* } catch (erro) {
         res.writeHead(404, {'Content-Typ':'text/plain'});
-        res.write('Erro 404! Arquivo não encontrado!');
+        res.write('Error 404! Arquivo não encontrado!');
         res.end();
 
+    }*/
+
+    if (recurso_carregado.isFile()) {
+       let mimeType =mimeType[path.extname(caminho_de_acesso).substring(1)];
+
+       res.writeHead(200, {'Content-Type':mimeType});
+       let fluxo_arquivo = fs.createReadStream(caminho_de_acesso);
+       fluxo_arquivo.pipe(res);
+
+    } else if (recurso_carregado.isDirectory()){
+        res.writeHead(302, {'Location':'index.html'});
+        res.end();
+
+    } else {
+        res.writeHead(500, {'Content-Type':'text/plain'});
+        res.write("ERROR 5000: Erro Interno do Servidor!");
+        res.end();
     }
    
 
-
-
-
-
+    //Método de escuta do servidor, ou seja, é nesse método que o servidor observa o que é requsitado para o sistema
 }).listen(port, hostname, () => {
     console.log(`Server está funcionando em https://${hostname}:${port}/`);
 });
