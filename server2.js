@@ -40,7 +40,7 @@ http.createServer((req,res) => {
     }*/
 
     if (recurso_carregado.isFile()) {
-       let mimeType =mimeType[path.extname(caminho_de_acesso).substring(1)];
+       let mimeType = mimeType[path.extname(caminho_de_acesso).substring(1)];
 
        res.writeHead(200, {'Content-Type':mimeType});
        let fluxo_arquivo = fs.createReadStream(caminho_de_acesso);
