@@ -7,8 +7,8 @@ const path = require('path'); //
 
 //Chamado do servidor
 
-const hostname = "127.0.0.1"; // Local onde a aplicação vai rodar
-const port = "3000"; //  A porta da aplicação
+const hostname = '127.0.0.1"'; // Local onde a aplicação vai rodar
+const port = '3000'; //  A porta da aplicação
 
 //mimeTypes é um objeto que guarda quais os tipos de arquivos meu servidor vai estar carregando
 const mimeType = {
@@ -47,12 +47,12 @@ http.createServer((req,res) => {
        fluxo_arquivo.pipe(res);
 
     } else if (recurso_carregado.isDirectory()){
-        res.writeHead(302, {'Location':'index.html'});
+        res.writeHead(302, {'Location': 'index.html'});
         res.end();
 
     } else {
-        res.writeHead(500, {'Content-Type':'text/plain'});
-        res.write("ERROR 500: Erro Interno do Servidor!");
+        res.writeHead(500, {'Content-Type': 'text/plain'});
+        res.write("500: Erro Interno do Servidor!");
         res.end();
     }
    
