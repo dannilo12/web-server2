@@ -12,9 +12,10 @@ const port = 3000; //  A porta da aplicação
 
 //mimeTypes é um objeto que guarda quais os tipos de arquivos meu servidor vai estar carregando
 const mimeTypes = {
-    htlm:"text/html",
+    html:"text/html",
     css:"text/css",
     js:"text/javascript",
+    php:"text/php",
     png:"image/png",
     jpeg:"image/jpeg",
     jpg:"image/jpg",
@@ -33,7 +34,7 @@ http.createServer((req, res) => {
     try {
         recurso_carregado =  fs.lstatSync(caminho_do_recurso);
     } catch (erro) {
-        res.writeHead(404, {'Content-Typ': 'text/plain'});
+        res.writeHead(404, {'Content-Type': 'text/plain'});
         res.write('Error 404! Arquivo não encontrado!');
         res.end();
     }
