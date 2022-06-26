@@ -3,12 +3,10 @@ const url = require('url');
 const fs = require('fs');
 const path = require('path');
 
-//const { hostname } = require('os');
+const hostname = "127.0.0.1";
+const port = "3000";
 
-hostname = "127.0.0.1";
-port = "3000";
-
-const mimetype = {
+const mimeType = {
     htlm:"text/html",
     css:"text/css",
     js:"text/javascript",
@@ -19,5 +17,7 @@ const mimetype = {
 };
 
 http.createServer((req,res) => {
-    
+
+}).listen(port, hostname, () => {
+    console.log(`Server está funcionando em https://${hostname}:${port}/`);
 });
